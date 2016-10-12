@@ -1,0 +1,2 @@
+kactivities: binary-without-manpage usr/bin/kactivitymanagerd
+kactivities: postinst-must-call-ldconfig usr/lib/*/libkactivitymanagerd_plugin.so
