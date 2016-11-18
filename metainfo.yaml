@@ -1,0 +1,20 @@
+maintainer: ivan
+description: Runtime and library to organize the user work in separate activities
+tier: 3
+type: solution
+platforms:
+    - name: Linux
+    - name: Windows
+    - name: MacOSX
+      note: Needs QtDBus
+portingAid: false
+deprecated: false
+release: true
+libraries:
+ - qmake: KActivities
+   cmake: "KF5::Activities"
+cmakename: KF5Activities
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 3
