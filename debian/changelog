@@ -1,9 +1,20 @@
-kactivities-kf5 (5.27.0-1+rpi1) stretch-staging; urgency=medium
+kactivities-kf5 (5.28.0-1+rpi1) stretch-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Mon, 24 Oct 2016 01:22:02 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 26 Jan 2017 06:24:01 +0000
+
+kactivities-kf5 (5.28.0-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+  * New upstream release (5.28)
+  * Bump group breaks (5.28)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 18 Nov 2016 16:07:11 +0100
 
 kactivities-kf5 (5.27.0-1) unstable; urgency=medium
 

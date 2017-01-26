@@ -5,17 +5,17 @@ Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.12~),
                debhelper (>= 9),
-               extra-cmake-modules (>= 5.27.0~),
+               extra-cmake-modules (>= 5.28.0~),
                kio-dev (>= 5.26.0~),
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.27.0~),
-               libkf5coreaddons-dev (>= 5.27.0~),
+               libkf5config-dev (>= 5.28.0~),
+               libkf5coreaddons-dev (>= 5.28.0~),
                libkf5dbusaddons-dev (>= 5.19.0~),
                libkf5declarative-dev (>= 5.19.0~),
                libkf5globalaccel-dev (>= 5.19.0~),
                libkf5i18n-dev (>= 5.19.0~),
                libkf5kcmutils-dev (>= 5.19.0~),
-               libkf5kio-dev (>= 5.27.0~),
+               libkf5kio-dev (>= 5.28.0~),
                libkf5service-dev (>= 5.17.0~),
                libkf5widgetsaddons-dev (>= 5.19.0~),
                libkf5windowsystem-dev (>= 5.19.0~),
@@ -46,7 +46,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: kactivities-bin, kactivitymanagerd
 Description: Library to organize the user work in separate activities.
  This library provides functionality for managing Activities.
-Breaks: libkf5activitiesstats1 (<< 5.27), plasma-framework (<< 5.27)
+Breaks: libkf5activitiesstats1 (<< 5.28), plasma-framework (<< 5.28)
 
 Package: qml-module-org-kde-activities
 Architecture: any
