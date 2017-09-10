@@ -3,13 +3,15 @@ Section: libs
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>
-Build-Depends: cmake (>= 2.8.12~),
+Build-Depends: cmake (>= 3.0~),
                debhelper (>= 9),
-               extra-cmake-modules (>= 5.28.0~),
+               doxygen,
+               extra-cmake-modules (>= 5.37.0~),
+               graphviz,
                kio-dev (>= 5.26.0~),
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.28.0~),
-               libkf5coreaddons-dev (>= 5.28.0~),
+               libkf5config-dev (>= 5.37.0~),
+               libkf5coreaddons-dev (>= 5.37.0~),
                libkf5dbusaddons-dev (>= 5.19.0~),
                libkf5declarative-dev (>= 5.19.0~),
                libkf5globalaccel-dev (>= 5.19.0~),
@@ -20,49 +22,15 @@ Build-Depends: cmake (>= 2.8.12~),
                libkf5widgetsaddons-dev (>= 5.19.0~),
                libkf5windowsystem-dev (>= 5.19.0~),
                libkf5xmlgui-dev (>= 5.19.0~),
+               libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
-               qtbase5-dev (>= 5.4),
-               qtdeclarative5-dev (>= 5.4)
-Standards-Version: 3.9.8
+               qtbase5-dev (>= 5.7.0~),
+               qtdeclarative5-dev (>= 5.4),
+               qttools5-dev-tools (>= 5.4),
+Standards-Version: 4.1.0
 Homepage: https://projects.kde.org/projects/frameworks/kactivities
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/frameworks/kactivities.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/frameworks/kactivities.git
-
-Package: libkf5activities-dev
-Section: libdevel
-Architecture: any
-Depends: libkf5activities5 (= ${binary:Version}),
-         qtbase5-dev (>= 5.4),
-         ${misc:Depends}
-Description: development files for kactivities.
- This library provides functionality for managing Activities.
- .
- Contains development files for kactivities.
-
-Package: libkf5activities5
-Architecture: any
-Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: kactivities-bin, kactivitymanagerd
-Description: Library to organize the user work in separate activities.
- This library provides functionality for managing Activities.
-Breaks: libkf5activitiesstats1 (<< 5.28), plasma-framework (<< 5.28)
-
-Package: qml-module-org-kde-activities
-Architecture: any
-Multi-arch: same
-Depends: libkf5activities5 (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: libkf5activities5 (<< 5.1.0-0ubuntu1),
-        qml-module-org-kde-extensionplugin (<< 5.25.0-1~)
-Replaces: libkf5activities5 (<< 5.1.0-0ubuntu1),
-          qml-module-org-kde-extensionplugin (<< 5.25.0-1~)
-Description: provides integration of QML and KDE Frameworks
- This import contains KDE extras that are visually similar to Qt Quick
- Controls.
- .
- This package contains the QML files used by libkf5declarative.
 
 Package: kactivities-bin
 Architecture: any
@@ -71,10 +39,57 @@ Description: Command Line Tool for KActivities
  kactivities-cli is a command line tool to interact with KActivities
  or for help with shell completion.
 
+Package: libkf5activities-dev
+Section: libdevel
+Architecture: any
+Depends: libkf5activities5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.7.0~),
+         ${misc:Depends},
+Recommends: libkf5activities-doc (= ${source:Version})
+Description: development files for kactivities.
+ This library provides functionality for managing Activities.
+ .
+ Contains development files for kactivities.
+
+Package: libkf5activities-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Library to organize the user work in separate activities (documentation)
+ This library provides functionality for managing Activities.
+ .
+ This package contains the qch documentation files.
+Section: doc
+
+Package: libkf5activities5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: kactivities-bin, kactivitymanagerd
+Description: Library to organize the user work in separate activities.
+ This library provides functionality for managing Activities.
+Breaks: libkf5activitiesstats1 (<< 5.37), plasma-framework (<< 5.37)
+
+Package: qml-module-org-kde-activities
+Architecture: any
+Multi-arch: same
+Depends: libkf5activities5 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Breaks: libkf5activities5 (<< 5.1.0-0ubuntu1),
+        qml-module-org-kde-extensionplugin (<< 5.25.0-1~),
+Replaces: libkf5activities5 (<< 5.1.0-0ubuntu1),
+          qml-module-org-kde-extensionplugin (<< 5.25.0-1~),
+Description: provides integration of QML and KDE Frameworks
+ This import contains KDE extras that are visually similar to Qt Quick
+ Controls.
+ .
+ This package contains the QML files used by libkf5declarative.
+
 Package: qml-module-org-kde-extensionplugin
 Depends: qml-module-org-kde-activities, ${misc:Depends}
 Architecture: all
-Priority: extra
+Priority: optional
 Section: oldlibs
 Description: transitional dummy package
  This is a transitional dummy package. It can safely be removed.
