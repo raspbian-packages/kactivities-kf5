@@ -1,7 +1,10 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
+export DEB_LDFLAGS_MAINT_APPEND := -Wl,--as-needed
+
+%:
+	dh $@ --with kf5,pkgkde_symbolshelper --buildsystem kf5 --without build_stamp
 
 override_dh_auto_build:
 	sed -i s/arch=!armel/optional=meh/ debian/libkf5activities5.symbols 
@@ -12,7 +15,7 @@ override_dh_auto_clean:
 	sed -i s/optional=meh/arch=!armel/ debian/libkf5activities5.symbols 
 
 override_dh_auto_configure:
-	$(overridden_command) -- -DBUILD_QCH=ON
+	dh_auto_configure -- -DBUILD_QCH=ON
 
 override_dh_strip:
-	$(overridden_command) --dbgsym-migration='libkf5activities5-dbg (<= 5.19.0-1~~)'
+	dh_strip --dbgsym-migration='libkf5activities5-dbg (<= 5.19.0-1~~)'

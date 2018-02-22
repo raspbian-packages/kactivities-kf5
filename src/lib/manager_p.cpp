@@ -62,27 +62,28 @@ Manager *Manager::self()
 {
     static std::mutex singleton;
     std::lock_guard<std::mutex> singleton_lock(singleton);
+    #if defined(QT_DEBUG)
+    QLoggingCategory::setFilterRules(QStringLiteral("org.kde.kactivities.lib.core.debug=true"));
+    #endif
 
     if (!s_instance) {
 
         runInMainThread([] () {
+
             // check if the activity manager is already running
             if (!Manager::isServiceRunning()) {
-
-                #if defined(QT_DEBUG)
-                QLoggingCategory::setFilterRules(QStringLiteral("org.kde.kactivities.lib.core.debug=true"));
+                bool disableAutolaunch = QCoreApplication::instance()->property("org.kde.KActivities.core.disableAutostart").toBool();
 
                 qCDebug(KAMD_CORELIB) << "Should we start the daemon?";
-                if (!QCoreApplication::instance()
-                         ->property("org.kde.KActivities.core.disableAutostart")
-                         .toBool()) {
+                // start only if not disabled and we have a dbus connection at all
+                if (!disableAutolaunch && QDBusConnection::sessionBus().interface()) {
                     qCDebug(KAMD_CORELIB) << "Starting the activity manager daemon";
-                    QProcess::startDetached(QStringLiteral("kactivitymanagerd"));
+                    auto reply = QDBusConnection::sessionBus().interface()->startService(KAMD_DBUS_SERVICE);
+                    if (!reply.isValid()) {
+                        //pre Plasma 5.12 the daemon did not support DBus activation.  Fall back to manually forking
+                        QProcess::startDetached(QStringLiteral("kactivitymanagerd"));
+                    }
                 }
-
-                #else
-                QProcess::startDetached(QStringLiteral("kactivitymanagerd"));
-                #endif
             }
 
             // creating a new instance of the class
@@ -98,7 +99,7 @@ bool Manager::isServiceRunning()
 {
     return
         (s_instance ? s_instance->m_serviceRunning : true)
-        && QDBusConnection::sessionBus().interface()->isServiceRegistered(KAMD_DBUS_SERVICE);
+        && QDBusConnection::sessionBus().interface() && QDBusConnection::sessionBus().interface()->isServiceRegistered(KAMD_DBUS_SERVICE);
 }
 
 void Manager::serviceOwnerChanged(const QString &serviceName, const QString &oldOwner, const QString &newOwner)
