@@ -1,9 +1,28 @@
-kactivities-kf5 (5.42.0-2+rpi1) buster-staging; urgency=medium
+kactivities-kf5 (5.44.0-1+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 22 Feb 2018 00:16:23 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 30 Mar 2018 12:37:45 +0000
+
+kactivities-kf5 (5.44.0-1) sid; urgency=medium
+
+  * New upstream release (5.44.0).
+  * Update build-deps and deps with the info from cmake
+  * Bump group breaks (5.44)
+  * Release to sid
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 21 Mar 2018 14:40:18 +0100
+
+kactivities-kf5 (5.43.0-1) experimental; urgency=medium
+
+  * Use the salsa canonical urls
+  * New upstream release (5.43.0).
+  * Update build-deps and deps with the info from cmake
+  * Bump group breaks (5.43)
+  * Release to experimental
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 26 Feb 2018 11:43:00 +0100
 
 kactivities-kf5 (5.42.0-2) sid; urgency=medium
 
