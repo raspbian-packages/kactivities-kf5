@@ -1,4 +1,3 @@
-# SymbolsHelper-Confirmed: 5.25.0 amd64
 libKF5Activities.so.5 libkf5activities5 #MINVER#
  _ZN11KActivities10Controller11addActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
@@ -114,51 +113,51 @@ libKF5Activities.so.5 libkf5activities5 #MINVER#
  _ZNK11KActivities8Consumer15currentActivityEv@Base 4.96.0
  _ZNK11KActivities8Consumer17runningActivitiesEv@Base 5.23.0
  (optional=templinst|arch=armel)_ZNSt15_Sp_counted_ptrIDnLN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 5.14.0
- (optional=templinst|arch=!armel)_ZNSt15_Sp_counted_ptrIDnLN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 5.13.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt15_Sp_counted_ptrIDnLN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 5.13.0
  (optional=templinst|arch=armel)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 5.11.0
- (optional=templinst|arch=!armel)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 4.98.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 5.21.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 5.21.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 5.21.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 5.21.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 5.21.0
- (optional=templinst|arch=armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 5.21.0
- (optional=templinst|arch=!armel)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 4.98.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE10_M_destroyEv@Base 5.21.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE10_M_disposeEv@Base 5.21.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE14_M_get_deleterERKSt9type_info@Base 5.21.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED0Ev@Base 5.21.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED1Ev@Base 5.21.0
+ (optional=templinst|arch=armel riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EED2Ev@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED0Ev@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED1Ev@Base 5.21.0
+ (optional=templinst|arch=!armel !riscv64)_ZNSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EED2Ev@Base 5.21.0
  _ZTIN11KActivities10ControllerE@Base 4.96.0
  _ZTIN11KActivities15ActivitiesModelE@Base 5.21.0
  _ZTIN11KActivities16ResourceInstanceE@Base 4.96.0
  _ZTIN11KActivities4InfoE@Base 4.96.0
  _ZTIN11KActivities8ConsumerE@Base 4.96.0
- (arch=armel)_ZTIN9__gnu_cxx7__mutexE@Base 5.11.0
- (arch=armel)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.11.0
- (arch=!armel)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
- (arch=armel)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.11.0
- (arch=!armel)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
+ (arch=armel riscv64)_ZTIN9__gnu_cxx7__mutexE@Base 5.44.0-1
+ (arch=armel riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
+ (arch=armel riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
  _ZTISt19_Sp_make_shared_tag@Base 5.21.0
- (arch=armel)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.21.0
- (arch=!armel)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
  _ZTSN11KActivities10ControllerE@Base 4.96.0
  _ZTSN11KActivities15ActivitiesModelE@Base 5.21.0
  _ZTSN11KActivities16ResourceInstanceE@Base 4.96.0
  _ZTSN11KActivities4InfoE@Base 4.96.0
  _ZTSN11KActivities8ConsumerE@Base 4.96.0
- (arch=armel)_ZTSN9__gnu_cxx7__mutexE@Base 5.11.0
- (arch=armel)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.11.0
- (arch=!armel)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
- (arch=armel)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.11.0
- (arch=!armel)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
+ (arch=armel riscv64)_ZTSN9__gnu_cxx7__mutexE@Base 5.44.0-1
+ (arch=armel riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTSSt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
+ (arch=armel riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
  _ZTSSt19_Sp_make_shared_tag@Base 5.21.0
- (arch=armel)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.21.0
- (arch=!armel)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
  _ZTVN11KActivities10ControllerE@Base 4.96.0
  _ZTVN11KActivities15ActivitiesModelE@Base 5.21.0
  _ZTVN11KActivities16ResourceInstanceE@Base 4.96.0
  _ZTVN11KActivities4InfoE@Base 4.96.0
  _ZTVN11KActivities8ConsumerE@Base 4.96.0
- (arch=armel)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.21.0
- (arch=!armel)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0-1
+ (arch=!armel !riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0

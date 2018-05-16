@@ -1,9 +1,22 @@
-kactivities-kf5 (5.44.0-1+rpi1) buster-staging; urgency=medium
+kactivities-kf5 (5.45.0-1+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 30 Mar 2018 12:37:45 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 16 May 2018 02:45:04 +0000
+
+kactivities-kf5 (5.45.0-1) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * New upstream release (5.45.0).
+  * Update build-deps and deps with the info from cmake
+  * Bump group breaks (5.45)
+  * Release to unstable
+
+  [ Manuel A. Fernandez Montecelo ]
+  * riscv64: update symbols (Closes: 897941)
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 05 May 2018 08:09:57 +0200
 
 kactivities-kf5 (5.44.0-1) sid; urgency=medium
 

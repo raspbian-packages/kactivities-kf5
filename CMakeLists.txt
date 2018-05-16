@@ -3,14 +3,14 @@
 cmake_minimum_required(VERSION 3.0)
 
 # KDE Frameworks
-set(KF5_VERSION "5.44.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.44.0") # handled by release scripts
+set(KF5_VERSION "5.45.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.45.0") # handled by release scripts
 project (KActivities VERSION ${KF5_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
 option (KACTIVITIES_ENABLE_EXCEPTIONS "If you have Boost 1.53, you need to build KActivities with exceptions enabled. This is UNTESTED and EXPERIMENTAL!" OFF)
 
-set (REQUIRED_QT_VERSION 5.7.0)
+set (REQUIRED_QT_VERSION 5.8.0)
 
 # We don't build in-source
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.44.0  NO_MODULE)
+find_package(ECM 5.45.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
