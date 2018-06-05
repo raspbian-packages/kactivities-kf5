@@ -50,19 +50,19 @@ class ActivityModel : public QAbstractListModel {
     Q_PROPERTY(QString shownStates READ shownStates WRITE setShownStates NOTIFY shownStatesChanged)
 
 public:
-    ActivityModel(QObject *parent = nullptr);
-    virtual ~ActivityModel();
+    explicit ActivityModel(QObject *parent = nullptr);
+    ~ActivityModel() override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const
-        Q_DECL_OVERRIDE;
+        override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-        Q_DECL_OVERRIDE;
+        override;
 
     QVariant headerData(int section, Qt::Orientation orientation,
-                        int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+                        int role = Qt::DisplayRole) const override;
 
-    QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;
+    QHash<int, QByteArray> roleNames() const override;
 
     enum Roles {
         ActivityId          = Qt::UserRole,

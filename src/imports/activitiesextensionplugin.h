@@ -27,8 +27,8 @@ class ActivitiesExtensionPlugin : public QQmlExtensionPlugin {
     Q_PLUGIN_METADATA(IID "org.kde.activities")
 
 public:
-    ActivitiesExtensionPlugin(QObject *parent = nullptr);
-    void registerTypes(const char *uri) Q_DECL_OVERRIDE;
+    explicit ActivitiesExtensionPlugin(QObject *parent = nullptr);
+    void registerTypes(const char *uri) override;
 };
 
 #endif // KACTIVITIES_IMPORTS_PLUGIN_H
