@@ -67,7 +67,7 @@ namespace Private {
     };
 
     /**
-     * Returns whether the the activity has a desired state.
+     * Returns whether the activity has a desired state.
      * If the state is 0, returns true
      */
     template <typename T>
@@ -324,15 +324,15 @@ void ActivitiesModelPrivate::hideActivity(const QString &id)
     }
 }
 
-#define CREATE_SIGNAL_EMITTER(What, Role)                                      \
+#define CREATE_SIGNAL_EMITTER(What,Role)                                      \
     void ActivitiesModelPrivate::onActivity##What##Changed(const QString &)    \
     {                                                                          \
         Private::emitActivityUpdated(this, shownActivities, sender(), Role);   \
     }
 
-CREATE_SIGNAL_EMITTER(Name, Qt::DisplayRole)
-CREATE_SIGNAL_EMITTER(Description, ActivitiesModel::ActivityDescription)
-CREATE_SIGNAL_EMITTER(Icon, Qt::DecorationRole)
+CREATE_SIGNAL_EMITTER(Name,Qt::DisplayRole)
+CREATE_SIGNAL_EMITTER(Description,ActivitiesModel::ActivityDescription)
+CREATE_SIGNAL_EMITTER(Icon,Qt::DecorationRole)
 
 #undef CREATE_SIGNAL_EMITTER
 
@@ -400,7 +400,7 @@ QVariant ActivitiesModel::data(const QModelIndex &index, int role) const
                 const QString &icon = item->icon();
 
                 // We need a default icon for activities
-                return icon.isEmpty() ? "preferences-activities" : icon;
+                return icon.isEmpty() ? QStringLiteral("preferences-activities") : icon;
             }
 
         case ActivityDescription:

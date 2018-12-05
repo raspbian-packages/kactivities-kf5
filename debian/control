@@ -6,11 +6,11 @@ Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 3.0~),
                debhelper (>= 11~),
                doxygen,
-               extra-cmake-modules (>= 5.49.0~),
+               extra-cmake-modules (>= 5.51.0~),
                graphviz,
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.49.0~),
-               libkf5coreaddons-dev (>= 5.49.0~),
+               libkf5config-dev (>= 5.51.0~),
+               libkf5coreaddons-dev (>= 5.51.0~),
                libkf5dbusaddons-dev (>= 5.19.0~),
                libkf5declarative-dev (>= 5.19.0~),
                libkf5globalaccel-dev (>= 5.19.0~),
@@ -67,7 +67,7 @@ Depends: ${misc:Depends}, ${shlibs:Depends}
 Recommends: kactivities-bin, kactivitymanagerd
 Description: Library to organize the user work in separate activities.
  This library provides functionality for managing Activities.
-Breaks: libkf5activitiesstats1 (<< 5.49), plasma-framework (<< 5.49)
+Breaks: libkf5activitiesstats1 (<< 5.51), plasma-framework (<< 5.51)
 
 Package: qml-module-org-kde-activities
 Architecture: any

@@ -59,7 +59,7 @@ public:
     DECLARE_RAII_MODEL_UPDATERS(ActivityModel)
 
     /**
-     * Returns whether the the activity has a desired state.
+     * Returns whether the activity has a desired state.
      * If the state is 0, returns true
      */
     template <typename T>
@@ -143,13 +143,13 @@ public:
     public:
         BackgroundCache()
             : initialized(false)
-            , plasmaConfig("plasma-org.kde.plasma.desktop-appletsrc")
+            , plasmaConfig(QStringLiteral("plasma-org.kde.plasma.desktop-appletsrc"))
         {
             using namespace std::placeholders;
 
-            const auto configFile = QStandardPaths::writableLocation(
-                                        QStandardPaths::GenericConfigLocation) +
-                                    QLatin1Char('/') + plasmaConfig.name();
+            const QString configFile = QStandardPaths::writableLocation(
+                                           QStandardPaths::GenericConfigLocation) +
+                                       QLatin1Char('/') + plasmaConfig.name();
 
             KDirWatch::self()->addFile(configFile);
 
@@ -229,7 +229,7 @@ public:
 
                 // Ignore if we have already found the background
                 if (newBackgrounds.contains(activityId) &&
-                    newBackgrounds[activityId][0] != '#') continue;
+                    newBackgrounds[activityId][0] != QLatin1Char('#')) continue;
 
                 auto newBackground = backgroundFromConfig(config);
 
@@ -460,15 +460,15 @@ void ActivityModel::hideActivity(const QString &id)
     }
 }
 
-#define CREATE_SIGNAL_EMITTER(What, Role)                                      \
+#define CREATE_SIGNAL_EMITTER(What,Role)                                      \
     void ActivityModel::onActivity##What##Changed(const QString &)             \
     {                                                                          \
         Private::emitActivityUpdated(this, m_shownActivities, sender(), Role); \
     }
 
-CREATE_SIGNAL_EMITTER(Name, Qt::DisplayRole)
-CREATE_SIGNAL_EMITTER(Description, ActivityDescription)
-CREATE_SIGNAL_EMITTER(Icon, Qt::DecorationRole)
+CREATE_SIGNAL_EMITTER(Name,Qt::DisplayRole)
+CREATE_SIGNAL_EMITTER(Description,ActivityDescription)
+CREATE_SIGNAL_EMITTER(Icon,Qt::DecorationRole)
 
 #undef CREATE_SIGNAL_EMITTER
 
@@ -506,7 +506,7 @@ void ActivityModel::setShownStates(const QString &states)
     m_shownStates.clear();
     m_shownStatesString = states;
 
-    for (const auto &state: states.split(',')) {
+    for (const auto &state: states.split(QLatin1Char(','))) {
         if (state == QStringLiteral("Running")) {
             m_shownStates.insert(Running);
 
@@ -562,7 +562,7 @@ QVariant ActivityModel::data(const QModelIndex &index, int role) const
             const QString &icon = item->icon();
 
             // We need a default icon for activities
-            return icon.isEmpty() ? "preferences-activities" : icon;
+            return icon.isEmpty() ? QStringLiteral("preferences-activities") : icon;
         }
 
     case ActivityDescription:

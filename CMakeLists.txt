@@ -3,8 +3,8 @@
 cmake_minimum_required(VERSION 3.0)
 
 # KDE Frameworks
-set(KF5_VERSION "5.49.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.49.0") # handled by release scripts
+set(KF5_VERSION "5.51.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.51.0") # handled by release scripts
 project (KActivities VERSION ${KF5_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.49.0  NO_MODULE)
+find_package(ECM 5.51.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -32,7 +32,7 @@ set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_
 
 include (KDEInstallDirs)
 include (KDECMakeSettings)
-include (KDECompilerSettings NO_POLICY_SCOPE)
+include (KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include (GenerateExportHeader)
 include (ECMGenerateHeaders)
 include (ECMAddQch)
@@ -68,6 +68,8 @@ ecm_setup_version (
    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5ActivitiesConfigVersion.cmake"
    SOVERSION 5
    )
+
+add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 
 add_subdirectory (src)
 if (BUILD_TESTING)
