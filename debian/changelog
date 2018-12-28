@@ -1,9 +1,18 @@
-kactivities-kf5 (5.51.0-1+rpi1) buster-staging; urgency=medium
+kactivities-kf5 (5.51.0-2+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Wed, 05 Dec 2018 21:44:03 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 28 Dec 2018 06:30:04 +0000
+
+kactivities-kf5 (5.51.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files, also from the logs of buildds.
+    (Closes: #915317, #916154)
+  * Remove unused (and wrong) 'testsuite' autopkgtest.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 26 Dec 2018 12:28:23 +0100
 
 kactivities-kf5 (5.51.0-1) unstable; urgency=medium
 
