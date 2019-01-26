@@ -1,16 +1,16 @@
 # vim:set softtabstop=3 shiftwidth=3 tabstop=3 expandtab:
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 # KDE Frameworks
-set(KF5_VERSION "5.51.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.51.0") # handled by release scripts
+set(KF5_VERSION "5.54.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.54.0") # handled by release scripts
 project (KActivities VERSION ${KF5_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
 option (KACTIVITIES_ENABLE_EXCEPTIONS "If you have Boost 1.53, you need to build KActivities with exceptions enabled. This is UNTESTED and EXPERIMENTAL!" OFF)
 
-set (REQUIRED_QT_VERSION 5.8.0)
+set (REQUIRED_QT_VERSION 5.9.0)
 
 # We don't build in-source
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.51.0  NO_MODULE)
+find_package(ECM 5.54.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -35,6 +35,7 @@ include (KDECMakeSettings)
 include (KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include (GenerateExportHeader)
 include (ECMGenerateHeaders)
+include (ECMQtDeclareLoggingCategory)
 include (ECMAddQch)
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
@@ -69,7 +70,7 @@ ecm_setup_version (
    SOVERSION 5
    )
 
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+
 
 add_subdirectory (src)
 if (BUILD_TESTING)
@@ -114,6 +115,8 @@ install (
    FILES ${CMAKE_CURRENT_BINARY_DIR}/kactivities_version.h
    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
    )
+
+install( FILES kactivities.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 
 # Write out the features
 feature_summary (WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

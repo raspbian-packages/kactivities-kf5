@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.51.0 amd64 arm64 armel armhf hppa hurd-i386 i386 mips mips64el mipsel ppc64el s390x
+# SymbolsHelper-Confirmed: 5.52.0 amd64
 libKF5Activities.so.5 libkf5activities5 #MINVER#
 * Build-Depends-Package: libkf5activities-dev
  _ZN11KActivities10Controller11addActivityERK7QString@Base 4.96.0
