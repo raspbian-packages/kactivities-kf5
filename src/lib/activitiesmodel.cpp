@@ -27,7 +27,6 @@
 #include <QDBusPendingCallWatcher>
 #include <QDebug>
 #include <QHash>
-#include <QList>
 #include <QFutureWatcher>
 #include <QModelIndex>
 
@@ -304,7 +303,6 @@ void ActivitiesModelPrivate::showActivity(InfoPtr activityInfo, bool notifyClien
     const auto _result  = shownActivities.insert(activityInfoPtr);
     // const auto iterator = std::get<0>(_result);
     const auto index    = std::get<1>(_result);
-    const auto found    = std::get<2>(_result);
 
 
     if (notifyClients) {
@@ -400,7 +398,7 @@ QVariant ActivitiesModel::data(const QModelIndex &index, int role) const
                 const QString &icon = item->icon();
 
                 // We need a default icon for activities
-                return icon.isEmpty() ? QStringLiteral("preferences-activities") : icon;
+                return icon.isEmpty() ? QStringLiteral("activities") : icon;
             }
 
         case ActivityDescription:

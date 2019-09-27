@@ -1,9 +1,37 @@
-kactivities-kf5 (5.54.0-1+rpi1) buster-staging; urgency=medium
+kactivities-kf5 (5.62.0-1+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 26 Jan 2019 03:02:35 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 27 Sep 2019 13:58:18 +0000
+
+kactivities-kf5 (5.62.0-1) unstable; urgency=medium
+
+  * Update reprotest args variable
+  * New upstream release (5.62.0).
+  * Update build-deps and deps with the info from cmake
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 20 Sep 2019 10:12:51 -0700
+
+kactivities-kf5 (5.61.0-1) experimental; urgency=medium
+
+  [ Scarlett Moore ]
+  * Build-Depend on qttools5-dev to fix a cross build failure
+    (see #915122 for more info) (Closes: 932633).
+
+  [ Maximiliano Curia ]
+  * Salsa CI automatic initialization by Tuco
+  * New upstream release (5.61.0).
+  * Update build-deps and deps with the info from cmake
+  * Add missing version to maintscript
+  * Ignore reprotest build path variations
+  * Release to experimental
+
+  [ Jonathan Riddell ]
+  * moved qdebug files
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 09 Sep 2019 21:10:08 +0100
 
 kactivities-kf5 (5.54.0-1) unstable; urgency=medium
 

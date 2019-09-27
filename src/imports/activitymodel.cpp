@@ -507,16 +507,16 @@ void ActivityModel::setShownStates(const QString &states)
     m_shownStatesString = states;
 
     for (const auto &state: states.split(QLatin1Char(','))) {
-        if (state == QStringLiteral("Running")) {
+        if (state == QLatin1String("Running")) {
             m_shownStates.insert(Running);
 
-        } else if (state == QStringLiteral("Starting")) {
+        } else if (state == QLatin1String("Starting")) {
             m_shownStates.insert(Starting);
 
-        } else if (state == QStringLiteral("Stopped")) {
+        } else if (state == QLatin1String("Stopped")) {
             m_shownStates.insert(Stopped);
 
-        } else if (state == QStringLiteral("Stopping")) {
+        } else if (state == QLatin1String("Stopping")) {
             m_shownStates.insert(Stopping);
 
         }
@@ -562,7 +562,7 @@ QVariant ActivityModel::data(const QModelIndex &index, int role) const
             const QString &icon = item->icon();
 
             // We need a default icon for activities
-            return icon.isEmpty() ? QStringLiteral("preferences-activities") : icon;
+            return icon.isEmpty() ? QStringLiteral("activities") : icon;
         }
 
     case ActivityDescription:

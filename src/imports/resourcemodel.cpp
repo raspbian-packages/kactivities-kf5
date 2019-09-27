@@ -23,11 +23,9 @@
 // Qt
 #include <QByteArray>
 #include <QDebug>
-#include <QIcon>
 #include <QModelIndex>
 #include <QCoreApplication>
 #include <QSqlQuery>
-#include <QSqlError>
 #include <QUuid>
 
 // KDE
@@ -336,7 +334,7 @@ QVariant ResourceModel::data(const QModelIndex &proxyIndex, int role) const
         //       for application:/ and a few more
 
         if (uri.startsWith('/')) {
-            uri = QStringLiteral("file://") + uri;
+            uri = QLatin1String("file://") + uri;
         }
 
         KFileItem file(uri);
@@ -617,7 +615,7 @@ void ResourceModel::sortItems(Qt::SortOrder sortOrder)
 
     QStringList result;
 
-    foreach (const auto &resource, resources) {
+    for (const auto &resource : qAsConst(resources)) {
         result << resource.first;
     }
 
@@ -687,7 +685,7 @@ void ResourceModel::loadDefaultsIfNeeded() const
 
 QString ResourceModel::validateResource(const QString &resource) const
 {
-    return resource.startsWith(QStringLiteral("file://")) ?
+    return resource.startsWith(QLatin1String("file://")) ?
             QUrl(resource).toLocalFile() : resource;
 }
 
