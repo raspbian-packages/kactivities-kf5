@@ -3,7 +3,7 @@ kactivities-kf5 (5.70.0-1+rpi1) bullseye-staging; urgency=medium
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 05 Jun 2020 22:57:26 +0000
+ -- Peter Michael Green <plugwash@raspbian.org>  Fri, 05 Jun 2020 22:57:26 +0000
 
 kactivities-kf5 (5.70.0-1) unstable; urgency=medium
 

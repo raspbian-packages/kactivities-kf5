@@ -8,10 +8,10 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 override_dh_auto_build:
 	sed -i s/arch=!armel/optional=meh/ debian/libkf5activities5.symbols 
-	$(overridden_command)
+	dh_auto_build
 
 override_dh_auto_clean:
-	$(overridden_command)
+	dh_auto_clean
 	sed -i s/optional=meh/arch=!armel/ debian/libkf5activities5.symbols 
 
 override_dh_auto_configure:
