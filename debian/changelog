@@ -1,9 +1,46 @@
-kactivities-kf5 (5.62.0-1+rpi1) bullseye-staging; urgency=medium
+kactivities-kf5 (5.70.0-1+rpi1) bullseye-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 27 Sep 2019 13:58:18 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Fri, 05 Jun 2020 22:57:26 +0000
+
+kactivities-kf5 (5.70.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Pino Toscano ]
+  * Update symbols file from the logs of buildds.
+
+  [ Sandro Knauß ]
+  * Bump compat level to 13.
+  * New upstream release (5.70.0).
+  * Update build-deps and deps with the info from cmake.
+  * Wrap long lines in changelog entries: 5.22.0-1.
+  * Set field Upstream-Contact in debian/copyright.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+ -- Sandro Knauß <hefee@debian.org>  Tue, 26 May 2020 23:56:37 +0200
+
+kactivities-kf5 (5.69.0-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * Bump compat level to 12.
+  * Bump Standards-Version to 4.5.0 (No changes needed).
+  * Get rid of debug-symbol-migration package.
+  * Add Rules-Requires-Root field to control.
+  * New upstream release (5.69.0).
+  * Update build-deps and deps with the info from cmake.
+  * Cleanup Build-Depends.
+  * Delete not needed Breaks/Confilcts.
+  * Enable hardening all.
+  * Update copyright file.
+  * Remove not needed injection of linker flags.
+
+ -- Sandro Knauß <hefee@debian.org>  Thu, 30 Apr 2020 01:02:09 +0200
 
 kactivities-kf5 (5.62.0-1) unstable; urgency=medium
 
@@ -276,7 +313,8 @@ kactivities-kf5 (5.22.0-2) unstable; urgency=medium
 kactivities-kf5 (5.22.0-1) unstable; urgency=medium
 
   [ Maximiliano Curia ]
-  * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
+  * Replace the "Historical name" ddeb-migration by its "Modern, clearer"
+    replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
   * debian/control: Update Vcs-Browser and Vcs-Git fields
   * Drop qt5-qmltooling-plugins build dependency

@@ -1,14 +1,16 @@
-# SymbolsHelper-Confirmed: 5.52.0 amd64
+# SymbolsHelper-Confirmed: 5.69.0 amd64 arm64 armel armhf hurd-i386 i386 ppc64el s390x
 libKF5Activities.so.5 libkf5activities5 #MINVER#
 * Build-Depends-Package: libkf5activities-dev
  _ZN11KActivities10Controller11addActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller11qt_metacallEN11QMetaObject4CallEiPPv@Base 4.96.0
  _ZN11KActivities10Controller11qt_metacastEPKc@Base 4.96.0
+ _ZN11KActivities10Controller12nextActivityEv@Base 5.69.0
  _ZN11KActivities10Controller12stopActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller13startActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller14removeActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller15setActivityIconERK7QStringS3_@Base 4.96.0
  _ZN11KActivities10Controller15setActivityNameERK7QStringS3_@Base 4.96.0
+ _ZN11KActivities10Controller16previousActivityEv@Base 5.69.0
  _ZN11KActivities10Controller16staticMetaObjectE@Base 4.96.0
  _ZN11KActivities10Controller18setCurrentActivityERK7QString@Base 4.96.0
  _ZN11KActivities10Controller22setActivityDescriptionERK7QStringS3_@Base 5.16.0
@@ -136,7 +138,7 @@ libKF5Activities.so.5 libkf5activities5 #MINVER#
  (arch=!armel !riscv64)_ZTISt11_Mutex_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
  (arch=armel riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
  (arch=!armel !riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
- (optional=gccinternal)_ZTISt19_Sp_make_shared_tag@Base 5.21.0
+ (optional=gccinternal|arch=armel armhf)_ZTISt19_Sp_make_shared_tag@Base 5.21.0
  (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
  (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
  _ZTSN11KActivities10ControllerE@Base 4.96.0

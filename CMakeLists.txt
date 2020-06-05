@@ -3,14 +3,14 @@
 cmake_minimum_required(VERSION 3.5)
 
 # KDE Frameworks
-set(KF5_VERSION "5.62.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.62.0") # handled by release scripts
+set(KF5_VERSION "5.70.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
 project (KActivities VERSION ${KF5_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
 option (KACTIVITIES_ENABLE_EXCEPTIONS "If you have Boost 1.53, you need to build KActivities with exceptions enabled. This is UNTESTED and EXPERIMENTAL!" OFF)
 
-set (REQUIRED_QT_VERSION 5.11.0)
+set (REQUIRED_QT_VERSION 5.12.0)
 
 # We don't build in-source
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -24,8 +24,8 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.62.0  NO_MODULE)
-set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://projects.kde.org/projects/kdesupport/extra-cmake-modules")
+find_package(ECM 5.70.0  NO_MODULE)
+set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH})
@@ -71,7 +71,8 @@ ecm_setup_version (
    SOVERSION 5
    )
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400)
 add_definitions(-DQT_NO_FOREACH)
 
 add_subdirectory (src)
@@ -117,8 +118,6 @@ install (
    FILES ${CMAKE_CURRENT_BINARY_DIR}/kactivities_version.h
    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
    )
-
-install(FILES kactivities.categories  DESTINATION  ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 # Write out the features
 feature_summary (WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
