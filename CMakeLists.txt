@@ -3,8 +3,8 @@
 cmake_minimum_required(VERSION 3.5)
 
 # KDE Frameworks
-set(KF5_VERSION "5.70.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.70.0") # handled by release scripts
+set(KF5_VERSION "5.74.0") # handled by release scripts
+set(KF5_DEP_VERSION "5.74.0") # handled by release scripts
 project (KActivities VERSION ${KF5_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.70.0  NO_MODULE)
+find_package(ECM 5.74.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -72,7 +72,7 @@ ecm_setup_version (
    )
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050d00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054400)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054900)
 add_definitions(-DQT_NO_FOREACH)
 
 add_subdirectory (src)

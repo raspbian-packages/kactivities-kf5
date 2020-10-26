@@ -1,3 +1,4 @@
 usr/lib/*/libKF5Activities.so.5
 usr/lib/*/libKF5Activities.so.5.*
 usr/share/qlogging-categories5/kactivities.categories
+usr/share/qlogging-categories5/kactivities.renamecategories

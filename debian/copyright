@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: kactivities
-Source: https://projects.kde.org/projects/frameworks/kactivities
+Source: https://invent.kde.org/frameworks/kactivities
 Upstream-Contact: kde-frameworks-devel@kde.org
 
 Files: *

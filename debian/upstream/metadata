@@ -1,5 +1,7 @@
-Changelog: https://cgit.kde.org/kactivities.git/log
+Bug-Database: https://bugs.kde.org/buglist.cgi?product=frameworks-kactivities&resolution=---
+Bug-Submit: https://bugs.kde.org/enter_bug.cgi?product=frameworks-kactivities
+Changelog: https://invent.kde.org/frameworks/kactivities/-/commits/master
 Donation: https://www.kde.org/community/donations/index.php
-Repository: https://anongit.kde.org/kactivities.git
-Repository-Browse: https://cgit.kde.org/kactivities.git
+Repository: https://invent.kde.org/frameworks/kactivities.git
+Repository-Browse: https://invent.kde.org/frameworks/kactivities
 Security-Contact: security@kde.org
