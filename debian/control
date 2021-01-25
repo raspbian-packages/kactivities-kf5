@@ -3,22 +3,22 @@ Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Maximiliano Curia <maxy@debian.org>,
-           Norbert Preining <norbert@preining.info>,
+           Norbert Preining <norbert@preining.info>
 Build-Depends: cmake (>= 3.5~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.77.0~),
+               extra-cmake-modules (>= 5.78.0~),
                graphviz,
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.77.0~),
-               libkf5coreaddons-dev (>= 5.77.0~),
-               libkf5windowsystem-dev (>= 5.77.0~),
+               libkf5config-dev (>= 5.78.0~),
+               libkf5coreaddons-dev (>= 5.78.0~),
+               libkf5windowsystem-dev (>= 5.78.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
-               qtbase5-dev (>= 5.13.0~),
+               qtbase5-dev (>= 5.14.0~),
                qtdeclarative5-dev,
                qttools5-dev,
-               qttools5-dev-tools,
+               qttools5-dev-tools
 Standards-Version: 4.5.1
 Homepage: https://invent.kde.org/frameworks/kactivities
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kactivities
@@ -36,8 +36,8 @@ Package: libkf5activities-dev
 Section: libdevel
 Architecture: any
 Depends: libkf5activities5 (= ${binary:Version}),
-         qtbase5-dev (>= 5.13.0~),
-         ${misc:Depends},
+         qtbase5-dev (>= 5.14.0~),
+         ${misc:Depends}
 Recommends: libkf5activities-doc (= ${source:Version})
 Description: development files for kactivities.
  This library provides functionality for managing Activities.
@@ -67,7 +67,7 @@ Architecture: any
 Multi-Arch: same
 Depends: libkf5activities5 (= ${binary:Version}),
          ${misc:Depends},
-         ${shlibs:Depends},
+         ${shlibs:Depends}
 Description: provides integration of QML and KDE Frameworks
  This import contains KDE extras that are visually similar to Qt Quick
  Controls.
