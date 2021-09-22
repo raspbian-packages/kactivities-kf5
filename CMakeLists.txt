@@ -3,14 +3,14 @@
 cmake_minimum_required(VERSION 3.16)
 
 # KDE Frameworks
-set(KF_VERSION "5.85.0") # handled by release scripts
-set(KF_DEP_VERSION "5.85.0") # handled by release scripts
+set(KF_VERSION "5.86.0") # handled by release scripts
+set(KF_DEP_VERSION "5.86.0") # handled by release scripts
 project (KActivities VERSION ${KF_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
 option (KACTIVITIES_ENABLE_EXCEPTIONS "If you have Boost 1.53, you need to build KActivities with exceptions enabled. This is UNTESTED and EXPERIMENTAL!" OFF)
 
-set (REQUIRED_QT_VERSION 5.15.0)
+set (REQUIRED_QT_VERSION 5.15.2)
 
 # We don't build in-source
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.85.0  NO_MODULE)
+find_package(ECM 5.86.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -72,7 +72,7 @@ ecm_setup_version (
    SOVERSION 5
    )
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
 
 add_subdirectory (src)
