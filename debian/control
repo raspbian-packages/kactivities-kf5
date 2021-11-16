@@ -1,0 +1,73 @@
+Source: kactivities-kf5
+Section: libs
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Norbert Preining <norbert@preining.info>
+Build-Depends: cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               doxygen,
+               extra-cmake-modules (>= 5.88.0~),
+               libboost-dev (>= 1.49~),
+               libkf5config-dev (>= 5.88.0~),
+               libkf5coreaddons-dev (>= 5.88.0~),
+               libkf5windowsystem-dev (>= 5.88.0~),
+               libqt5sql5-sqlite,
+               pkg-kde-tools (>= 0.15.15ubuntu1~),
+               qtbase5-dev (>= 5.15.2~),
+               qtdeclarative5-dev,
+               qttools5-dev,
+               qttools5-dev-tools,
+Standards-Version: 4.6.0
+Homepage: https://invent.kde.org/frameworks/kactivities
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kactivities
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kactivities.git
+Rules-Requires-Root: no
+
+Package: kactivities-bin
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Command Line Tool for KActivities
+ kactivities-cli is a command line tool to interact with KActivities
+ or for help with shell completion.
+
+Package: libkf5activities-dev
+Section: libdevel
+Architecture: any
+Depends: libkf5activities5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.15.2~),
+         ${misc:Depends},
+Recommends: libkf5activities-doc (= ${source:Version})
+Description: development files for kactivities.
+ This library provides functionality for managing Activities.
+ .
+ Contains development files for kactivities.
+
+Package: libkf5activities-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Library to organize the user work in separate activities (documentation)
+ This library provides functionality for managing Activities.
+ .
+ This package contains the qch documentation files.
+Section: doc
+
+Package: libkf5activities5
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Recommends: kactivities-bin, kactivitymanagerd
+Description: Library to organize the user work in separate activities.
+ This library provides functionality for managing Activities.
+
+Package: qml-module-org-kde-activities
+Architecture: any
+Multi-Arch: same
+Depends: libkf5activities5 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: provides integration of QML and KDE Frameworks
+ This import contains KDE extras that are visually similar to Qt Quick
+ Controls.
+ .
+ This package contains the QML files used by libkf5declarative.
