@@ -1,9 +1,20 @@
-kactivities-kf5 (5.88.0-1+rpi1) bookworm-staging; urgency=medium
+kactivities-kf5 (5.90.0-1+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 25 Nov 2021 14:37:29 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Mon, 21 Feb 2022 11:03:27 +0000
+
+kactivities-kf5 (5.90.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (5.89.0).
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.90.0).
+  * Added myself to the uploaders.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Fri, 11 Feb 2022 23:46:42 +0100
 
 kactivities-kf5 (5.88.0-1) unstable; urgency=medium
 

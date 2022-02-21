@@ -99,14 +99,14 @@ set_target_properties (
 target_link_libraries (
    KF5Activities
    PUBLIC
-      Qt5::Core
+      Qt${QT_MAJOR_VERSION}::Core
    PRIVATE
-      Qt5::DBus
+      Qt${QT_MAJOR_VERSION}::DBus
    )
 
 target_include_directories (
    KF5Activities
-   INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KActivities>"
+   INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KActivities>"
    )
 
 # install
@@ -126,13 +126,13 @@ ecm_generate_headers (
    )
 install (
    FILES ${KActivities_CamelCase_HEADERS}
-   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KActivities/KActivities
+   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KActivities/KActivities
    COMPONENT Devel
    )
 
 install (
    FILES ${KActivities_HEADERS} ${CMAKE_CURRENT_BINARY_DIR}/kactivities_export.h
-   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KActivities/kactivities
+   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KActivities/kactivities
    COMPONENT Devel
    )
 
@@ -168,21 +168,20 @@ endif()
 
 
 if (NOT WIN32)
-   configure_file (
-      ${CMAKE_CURRENT_SOURCE_DIR}/libKActivities.pc.cmake
-      ${CMAKE_CURRENT_BINARY_DIR}/libKActivities.pc
-      )
-   install (
-      FILES ${CMAKE_CURRENT_BINARY_DIR}/libKActivities.pc
-      DESTINATION ${KDE_INSTALL_LIBDIR}/pkgconfig
-      )
+    ecm_generate_pkgconfig_file(BASE_NAME libKActivities
+      LIB_NAME KF5Activities
+      INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KActivities
+      DEPS Qt${QT_MAJOR_VERSION}Core
+      DESCRIPTION "libKActivities is a C++ library for using KDE activities"
+      INSTALL
+    )
 endif ()
 
 include (ECMGeneratePriFile)
 ecm_generate_pri_file (
    BASE_NAME KActivities
    LIB_NAME KF5Activities
-   FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KActivities
+   FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KActivities
    )
 install (
    FILES ${PRI_FILENAME}
