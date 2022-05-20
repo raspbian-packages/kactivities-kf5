@@ -3,8 +3,8 @@
 cmake_minimum_required(VERSION 3.16)
 
 # KDE Frameworks
-set(KF_VERSION "5.90.0") # handled by release scripts
-set(KF_DEP_VERSION "5.90.0") # handled by release scripts
+set(KF_VERSION "5.93.0") # handled by release scripts
+set(KF_DEP_VERSION "5.93.0") # handled by release scripts
 project (KActivities VERSION ${KF_VERSION})
 
 option (KACTIVITIES_LIBRARY_ONLY "If true, compiles only the KActivities library, without the QML imports." OFF)
@@ -24,7 +24,7 @@ set (KACTIVITIES_CURRENT_ROOT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Extra CMake stuff
 include(FeatureSummary)
-find_package(ECM 5.90.0  NO_MODULE)
+find_package(ECM 5.93.0  NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -40,6 +40,8 @@ include (ECMGeneratePkgConfigFile)
 include (ECMQtDeclareLoggingCategory)
 include (ECMAddQch)
 include (ECMMarkNonGuiExecutable)
+include(ECMDeprecationSettings)
+include (ECMQmlModule)
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
@@ -73,8 +75,10 @@ ecm_setup_version (
    SOVERSION 5
    )
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.90.0
+)
 
 add_subdirectory (src)
 if (BUILD_TESTING)
@@ -116,7 +120,7 @@ install (
 
 install (
    FILES ${CMAKE_CURRENT_BINARY_DIR}/kactivities_version.h
-   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
+   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KActivities COMPONENT Devel
    )
 
 # Write out the features

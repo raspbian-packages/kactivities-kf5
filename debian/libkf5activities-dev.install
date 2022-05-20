@@ -1,5 +1,4 @@
 usr/include/KF5/KActivities/
-usr/include/KF5/kactivities_version.h
 usr/lib/*/cmake/KF5Activities/
 usr/lib/*/libKF5Activities.so
 usr/lib/*/pkgconfig/libKActivities.pc
