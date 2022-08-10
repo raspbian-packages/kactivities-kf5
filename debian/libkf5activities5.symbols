@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.78.0 alpha amd64 arm64 armel armhf hppa hurd-i386 i386 ia64 m68k mips64el mipsel powerpc ppc64 ppc64el riscv64 s390x sh4 sparc64 x32
+# SymbolsHelper-Confirmed: 5.96.0 riscv64
 libKF5Activities.so.5 libkf5activities5 #MINVER#
 * Build-Depends-Package: libkf5activities-dev
  _ZN11KActivities10Controller11addActivityERK7QString@Base 4.96.0
@@ -127,8 +127,8 @@ libKF5Activities.so.5 libkf5activities5 #MINVER#
  (arch=armel riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
  (arch=!armel !riscv64)_ZTISt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
  (optional=gccinternal|arch=armel armhf)_ZTISt19_Sp_make_shared_tag@Base 5.21.0
- (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
- (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=!armel !riscv64)_ZTISt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZTSN11KActivities10ControllerE@Base 4.96.0
  _ZTSN11KActivities15ActivitiesModelE@Base 5.21.0
  _ZTSN11KActivities16ResourceInstanceE@Base 4.96.0
@@ -140,13 +140,13 @@ libKF5Activities.so.5 libkf5activities5 #MINVER#
  (arch=armel riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
  (arch=!armel !riscv64)_ZTSSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE@Base 4.98.0
  _ZTSSt19_Sp_make_shared_tag@Base 5.21.0
- (arch=armel riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
- (arch=!armel !riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=!armel !riscv64)_ZTSSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZTVN11KActivities10ControllerE@Base 4.96.0
  _ZTVN11KActivities15ActivitiesModelE@Base 5.21.0
  _ZTVN11KActivities16ResourceInstanceE@Base 4.96.0
  _ZTVN11KActivities4InfoE@Base 4.96.0
  _ZTVN11KActivities8ConsumerE@Base 4.96.0
- (arch=armel riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE1EE@Base 5.44.0
- (arch=!armel !riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIS1_ELN9__gnu_cxx12_Lock_policyE2EE@Base 5.21.0
+ (arch=armel riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE1EE@Base 5.94.0
+ (arch=!armel !riscv64)_ZTVSt23_Sp_counted_ptr_inplaceIN11KActivities4InfoESaIvELN9__gnu_cxx12_Lock_policyE2EE@Base 5.94.0
  _ZZNSt19_Sp_make_shared_tag5_S_tiEvE5__tag@Base 5.51.0

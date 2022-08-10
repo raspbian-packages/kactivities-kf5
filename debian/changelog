@@ -1,9 +1,45 @@
-kactivities-kf5 (5.94.0-1+rpi1) bookworm-staging; urgency=medium
+kactivities-kf5 (5.96.0-2+rpi1) bookworm-staging; urgency=medium
 
   [changes brought forward from 5.12.0-1+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Sun, 19 Jul 2015 21:22:27 +0000]
   * Add symbols file hack for raspbian.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 28 May 2022 16:34:57 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Wed, 10 Aug 2022 00:58:54 +0000
+
+kactivities-kf5 (5.96.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files from the logs of buildds.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 01 Aug 2022 19:59:20 +0200
+
+kactivities-kf5 (5.96.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (5.96.0).
+  * Refresh lintian overrides.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 31 Jul 2022 13:33:00 +0200
+
+kactivities-kf5 (5.94.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Update symbols files from the logs of buildds.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 25 Jul 2022 20:55:28 +0200
+
+kactivities-kf5 (5.94.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.6.1, no changes required.
+  * Remove inactive Uploaders.
+  * Modernize building:
+    - add the dh-sequence-kf5 build dependency to use the kf5 addon
+      automatically
+    - drop all the manually specified addons and buildsystem for dh
+  * CI: enable again the blhc job.
+  * Update symbols file. (Closes: #1012955)
+
+ -- Pino Toscano <pino@debian.org>  Sat, 23 Jul 2022 12:09:49 +0200
 
 kactivities-kf5 (5.94.0-1) unstable; urgency=medium
 
