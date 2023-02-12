@@ -7,18 +7,18 @@ Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                dh-sequence-kf5,
                doxygen,
-               extra-cmake-modules (>= 5.101.0~),
+               extra-cmake-modules (>= 5.102.0~),
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.101.0~),
-               libkf5coreaddons-dev (>= 5.101.0~),
-               libkf5windowsystem-dev (>= 5.101.0~),
+               libkf5config-dev (>= 5.102.0~),
+               libkf5coreaddons-dev (>= 5.102.0~),
+               libkf5windowsystem-dev (>= 5.102.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
-Standards-Version: 4.6.1
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/frameworks/kactivities
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kactivities
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kactivities.git
