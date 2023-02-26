@@ -2,16 +2,16 @@ Source: kactivities-kf5
 Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Aurélien COUDERC <coucouf@debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                dh-sequence-kf5,
                doxygen,
-               extra-cmake-modules (>= 5.102.0~),
+               extra-cmake-modules (>= 5.103.0~),
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.102.0~),
-               libkf5coreaddons-dev (>= 5.102.0~),
-               libkf5windowsystem-dev (>= 5.102.0~),
+               libkf5config-dev (>= 5.103.0~),
+               libkf5coreaddons-dev (>= 5.103.0~),
+               libkf5windowsystem-dev (>= 5.103.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
@@ -26,7 +26,7 @@ Rules-Requires-Root: no
 
 Package: kactivities-bin
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends},
 Description: Command Line Tool for KActivities
  kactivities-cli is a command line tool to interact with KActivities
  or for help with shell completion.
@@ -37,7 +37,7 @@ Architecture: any
 Depends: libkf5activities5 (= ${binary:Version}),
          qtbase5-dev (>= 5.15.2~),
          ${misc:Depends},
-Recommends: libkf5activities-doc (= ${source:Version})
+Recommends: libkf5activities-doc (= ${source:Version}),
 Description: development files for kactivities.
  This library provides functionality for managing Activities.
  .
@@ -46,7 +46,7 @@ Description: development files for kactivities.
 Package: libkf5activities-doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: Library to organize the user work in separate activities (documentation)
  This library provides functionality for managing Activities.
  .
@@ -56,8 +56,8 @@ Section: doc
 Package: libkf5activities5
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: kactivities-bin, kactivitymanagerd
+Depends: ${misc:Depends}, ${shlibs:Depends},
+Recommends: kactivities-bin, kactivitymanagerd,
 Description: Library to organize the user work in separate activities.
  This library provides functionality for managing Activities.
 
