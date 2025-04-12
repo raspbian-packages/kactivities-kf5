@@ -1,0 +1,5 @@
+usr/include/KF5/KActivities/
+usr/lib/*/cmake/KF5Activities/
+usr/lib/*/libKF5Activities.so
+usr/lib/*/pkgconfig/libKActivities.pc
+usr/lib/*/qt5/mkspecs/modules/qt_KActivities.pri
