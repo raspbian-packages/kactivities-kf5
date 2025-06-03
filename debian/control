@@ -4,22 +4,22 @@ Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Aurélien COUDERC <coucouf@debian.org>,
            Patrick Franz <deltaone@debian.org>,
-Build-Depends: cmake (>= 3.16~),
-               debhelper-compat (= 13),
+Build-Depends: debhelper-compat (= 13),
                dh-sequence-kf5,
+               cmake (>= 3.16~),
                doxygen,
-               extra-cmake-modules (>= 5.115.0~),
+               extra-cmake-modules (>= 5.116.0~),
                libboost-dev (>= 1.49~),
-               libkf5config-dev (>= 5.115.0~),
-               libkf5coreaddons-dev (>= 5.115.0~),
-               libkf5windowsystem-dev (>= 5.115.0~),
+               libkf5config-dev (>= 5.116.0~),
+               libkf5coreaddons-dev (>= 5.116.0~),
+               libkf5windowsystem-dev (>= 5.116.0~),
                libqt5sql5-sqlite,
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.15.2~),
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Homepage: https://invent.kde.org/frameworks/kactivities
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kactivities
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kactivities.git
